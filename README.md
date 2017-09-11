@@ -9,3 +9,12 @@
 `service php-fpm7 start|restart|stop`
 
 `service nginx congfigtest|start|restart|stop|reload`
+
+### 安装
+`wget https://github.com/Jasmine2/aliyun-php/archive/v0.1.tar.gz`
+
+`tar -zxvf aliyun-php-0.1.tar.gz`
+
+`cd aliyun-php-0.1`
+
+`./alyun.sh`
