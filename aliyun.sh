@@ -9,7 +9,7 @@ groupadd www
 useradd -g www -d /home/www -m www
 # 下载源文件
 yum install -y gcc gcc-c++ make cmake bison autoconf wget lrzsz 
-wget http://cn2.php.net/distributions/php-7.0.17.tar.gz
+wget http://101.96.10.58/cn.php.net/distributions/php-7.0.32.tar.gz
 wget http://tengine.taobao.org/download/tengine-2.2.0.tar.gz
 # 安装必要文件
 
@@ -26,9 +26,9 @@ yum install -y libmcrypt libmcrypt-devel mcrypt mhash
 yum -y install automake
 yum -y install zlib zlib-devel pcre-devel
 #解压文件
-tar -zxvf php-7.0.17.tar.gz
+tar -zxvf php-7.0.32.tar.gz
 tar -zxvf tengine-2.2.0.tar.gz
-cd php-7.0.17
+cd php-7.0.32
 ./configure --prefix=/usr/local/php7 --with-config-file-path=/usr/local/php7/etc --with-config-file-scan-dir=/usr/local/php7/etc/php.d --with-mcrypt=/usr/include --enable-mysqlnd --with-mysqli --with-pdo-mysql --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-gd --with-iconv --with-zlib --enable-xml --enable-shmop --enable-sysvsem --enable-inline-optimization --enable-mbregex --enable-mbstring --enable-ftp --enable-gd-native-ttf --with-openssl --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext --enable-session --with-curl --with-jpeg-dir --with-freetype-dir --enable-opcache 
 make -j$CUPNO
 make install
